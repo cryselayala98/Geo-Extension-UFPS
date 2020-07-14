@@ -1,0 +1,65 @@
+<!--autores-->
+<h3>Instituciones Aliadas</h3>
+<div class="box">
+
+    <form action="/links/{{proyecto.codigo_proyecto}}/registrarInstitucion" method="POST">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label>Nombre de la institución</label>
+                    <input type="text" class="form-control" name="nombre" required>
+                </div><!-- /.form-group -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label>Descripción de la institución (Información que describa el papel que tiene la institucón aliada en el proyecto, datos de contacto)</label>
+                    <textarea class="form-control" name="descripcion_institucion" rows="6"></textarea>
+                </div><!-- /.form-group -->
+            </div>
+        </div>
+        <div class="form-group center">
+            <input type="submit" value="Registrar Institución" class="btn btn-inversed btn-primary"
+                style="margin-top: 20px;">
+        </div><!-- /.form-group -->
+    </form>
+</div>
+
+<div class="box">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="center">
+                {{#if instituciones}}
+
+          <table class="table table-striped" id="tabla_instituciones">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each instituciones}}
+              <tr>
+                <td>{{id}}</td>
+                <td>{{nombre}}</td>
+                <td>
+                  <center>
+                     <a href="/links/{{proyecto.codigo_proyecto}}/{{id}}/eliminar_institucion" class="btn btn-primary btn-inversed btn-small"><i class="fa fa-ban"></i>Eliminar</a>
+                  </center>
+                </td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+
+        {{else}}
+          No hay Instituciones registradas
+        {{/if}}
+            </div>
+        </div>
+    </div>
+</div>

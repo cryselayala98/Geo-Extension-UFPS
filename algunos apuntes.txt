@@ -1,0 +1,9 @@
+explicaciones de algunas librerías
+
+- mysql -> modulo para conectarse con bases de datos y realizar consultas
+- express-mysql-session -> almacena las sesiones en la base de datos, en lugar del servidor
+- bcryptjs -> para cifrado de contraseñas
+- passport -> es un modulo para autenticar, y manejar el proceso de login de un usuario en nuestra aplicacion
+  - passport-local -> un complemento de passport para autenticar a los usuarios con la base de datos
+- connect-flash -> sirve para mostrar mensajes de error y exito cuando el usuario realiza una operacion
+- express-validator -> es un modulo para validar los datos que el usuario envía desde la vista

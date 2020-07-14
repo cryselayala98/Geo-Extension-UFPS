@@ -1,0 +1,189 @@
+<div id="main-wrapper">
+        <div id="main">
+            <div id="main-inner">
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="block-content block-content-small-padding">
+                                <div class="block-content-inner">
+                                    <h2 class="center">Editar Proyecto de Extensión</h2>
+
+                                    <form action="/links/{{proyecto.codigo_proyecto}}/editar" method="POST">
+                                        <div class="box">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>Código del Proyecto</label>
+                                                        <input type="text" class="form-control" name="codigo" value="{{proyecto.codigo_proyecto}}" >
+                                                    </div><!-- /.form-group -->
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>Nombre del Proyecto</label>
+                                                        <input type="text" class="form-control" name="nombre" value="{{proyecto.nombre_proyecto}}" required>
+                                                    </div><!-- /.form-group -->
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>Programa académico</label>
+                                                        <select id="select-location" name="programa" class="form-control">          
+                                                                    <option value="{{proyecto.programa_academico}}" selected>{{proyecto.programa_academico}}</option>
+                                                                    <option value="--">--</option>
+                                                                    <option value="Administración de Empresas">Administración de Empresas</option>
+                                                                    <option value="Arquitectura">Arquitectura</option>
+                                                                    <option value="Comercio Internacional">Comercio Internacional</option>
+                                                                    <option value="Comunicación Social">Comunicación Social</option>
+                                                                    <option value="Contaduría Pública">Contaduría Pública</option>
+                                                                    <option value="Derecho">Derecho</option>
+                                                                    <option value="Enfermería"> Enfermería</option>
+                                                                    <option value="Ingeniería Agroindustrial">Ingeniería Agroindustrial</option>
+                                                                    <option value="Ingeniería Agronómica">Ingeniería Agronómica</option>
+                                                                    <option value="Ingeniería Ambiental">Ingeniería Ambiental</option>
+                                                                    <option value="Ingeniería Biotecnológica">Ingeniería Biotecnológica</option>
+                                                                    <option value="Ingeniería Civil">Ingeniería Civil</option>
+                                                                    <option value="Ingeniería de Minas">Ingeniería de Minas</option>
+                                                                    <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                                                                    <option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option>
+                                                                    <option value="Ingeniería Electrónica">Ingeniería Electrónica</option>
+                                                                    <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                                                                    <option value="Ingeniería Mecánica">Ingeniería Mecánica</option>
+                                                                    <option value="Ingeniería Pecuaria">Ingeniería Pecuaria</option>
+                                                                    <option value="Licenciatura en Matemáticas">Licenciatura en Matemáticas</option>
+                                                                    <option value="Licenciatura en Ciencias Naturales y Educación Ambiental">Licenciatura en Ciencias Naturales y Educación Ambiental</option>
+                                                                    <option value="Licenciatura en Educación Infantil">Licenciatura en Educación Infantil</option>
+                                                                    <option value="Química Industrial">Química Industrial</option>
+                                                                    <option value="Seguridad y Salud en el Trabajo">Seguridad y Salud en el Trabajo</option>
+                                                                    <option value="Trabajo Social">Trabajo Social</option>
+                                                                    <option value="Zootecnia">Zootecnia</option>
+                                                                </select>
+                                                    </div><!-- /.form-group -->
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>N° de Convenio</label>
+                                                        <input type="text" class="form-control" name="convenio" value="{{proyecto.num_convenio}}">
+                                                    </div><!-- /.form-group -->
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                    <div class="form-group">
+                                                        <label>Meses de duración</label>
+                                                        <input type="text" class="form-control" name="duracion" value="{{proyecto.meses_duracion}}" required>
+                                                    </div><!-- /.form-group -->
+                                                </div>
+
+                                                <div class="col-sm-5">
+                                                    <div class="form-group">
+                                                        <label>Fecha de inicio</label>
+                                                        <input type="date" class="form-control" name="fecha_inicio"  value="{{fechas.f_f}}" required>
+                                                    </div><!-- /.form-group -->
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <div class="form-group">
+                                                        <label>Fecha de Finalización</label>
+                                                        <input type="date" class="form-control" name="fecha_fin" value="{{fechas.f_f}}" required>
+                                                    </div><!-- /.form-group -->
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                    <div class="form-group">
+                                                        <label>Población</label>
+                                                        <input type="text" class="form-control" name="poblacion" value="{{proyecto.poblacion}}">
+                                                    </div><!-- /.form-group -->
+                                                </div>
+
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <label>Grupo de Investigación</label>
+                                                        <input type="text" class="form-control" name="grupo_investigacion" value="{{proyecto.grupo_investigacion}}">
+                                                    </div><!-- /.form-group -->
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <!-- Default inline 1-->
+                                                    <label>Estado</label>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" class="custom-control-input" value="en_ejecucion" id="en_ejecucion" name="estado" {{#if en_ejecucion}} checked {{/if}}>
+                                                        <label class="custom-control-label" for="en_ejecucion">En ejecución</label>
+                                                    </div>
+                                                    <!-- Default inline 2-->
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" class="custom-control-input" value="finalizado" id="finalizado" name="estado" {{#if finalizado}} checked {{/if}}>
+                                                        <label class="custom-control-label" for="finalizado">Finalizado</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label>Descripción del proyecto</label>
+                                                        <p>Haga una breve descripción acerca del proyecto, incluyendo 
+                                                           los siguientes ítems: <i>Objetivo General, Objetivos específicos, 
+                                                           Problema, Justificación, alcance.</i> Puedes agregar alguna otra información 
+                                                           que sea de relevancia para su proyecto.</p>
+
+                                                        <textarea class="form-control" name="descripcion" rows="6">{{proyecto.descripcion}}</textarea>
+                                                    </div><!-- /.form-group -->
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label>Correo de contacto</label>
+                                                        <input type="email" class="form-control" name="correo" value="{{proyecto.correo_contacto}}">
+                                                    </div><!-- /.form-group -->
+                                                </div>
+                                           </div>
+                                        </div><!-- /.box -->
+                                        
+                                        <div class="form-group center">
+                                            <input type="submit" value="Guardar" class="btn btn-inversed btn-primary">
+                                        </div><!-- /.form-group -->
+                                    </form>
+                                    
+                                    {{>autor}}
+                                    
+                                    {{>institucion}}
+                                    <!--Georreferencia-->
+                                    <h3>Georreferencia</h3>
+                                    <div class="box">
+                                        <div class="center">
+                                            <div class="row">
+                                                <label>Seleccionar Ubicaciones (Haciendo clic derecho sobre el mapa)</label>
+                                                <div class="col-sm-12">
+                                                    <div id="map" class="map-edit" data-style="2"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="center">
+                                                    <a href="/links/{{proyecto.codigo_proyecto}}/eliminar_ubicaciones"><button class="btn btn-inversed btn-primary eliminar_ubicaciones" style="margin-top: 10px;">Eliminar todas las ubicaciones</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.block-content-inner -->
+                            </div><!-- /.block-content -->
+                        </div>
+                    {{> right_sidebar}}
+                    </div>
+                </div><!-- /.container -->
+            </div><!-- /#main-inner -->
+        </div><!-- /#main -->
+    </div><!-- /#main-wrapper -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <!--Leaflet-->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <script type="text/javascript" src="/public/js/leaflet-properties-map-edit.js"></script>
+
+
+   

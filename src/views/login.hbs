@@ -1,0 +1,36 @@
+{{>message}} <!--mensajes en caso de que no inicie sesion-->
+<div id="main-wrapper">
+        <div id="main">
+            <div id="main-inner">
+                <div class="container">
+                    <div class="block-content block-content-small-padding">
+                        <div class="block-content-inner">
+                            <div class="row">
+                                <div class="col-sm-4 col-sm-offset-4">
+                                    <h2 class="center">Iniciar sesión Como Administrador</h2>
+                                    <div class="box">
+                                        <form method="POST" action="/iniciar_sesion">
+                                            <div class="form-group">
+                                                <label>Nombre de usuario</label>
+                                                <input type="text" name="username"  class="form-control" required>
+                                            </div><!-- /.form-group -->
+
+                                            <div class="form-group">
+                                                <label>Contraseña</label>
+                                                <input type="password" name="password" class="form-control" required>
+                                            </div><!-- /.form-group -->
+
+                                            <div class="form-group">
+                                                <input type="submit" value="Iniciar Sesión" class="btn btn-primary btn-inversed btn-block">
+                                            </div><!-- /.form-group -->
+                                        </form>
+                                    </div><!-- /.box -->
+                                </div>
+                            </div><!-- /.row -->
+                        </div><!-- /.block-content-inner -->
+                    </div><!-- /.block-content -->
+                </div><!-- /.container -->
+            </div><!-- /#main-inner -->
+        </div><!-- /#main -->
+    </div><!-- /#main-wrapper -->
+

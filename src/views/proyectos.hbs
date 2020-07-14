@@ -1,0 +1,43 @@
+<div id="main-wrapper">
+        <div id="main">
+            <div id="main-inner">
+                <div class="container">
+                    <div class="block-content block-content-small-padding">
+                        <div class="block-content-inner">
+                            <h2 class="center">Proyectos de Extensión</h2>
+                            <table class="table table-striped" id="myTable">
+                                <thead>
+                                    <tr>
+                                        <th>Codigo</th>
+                                        <th>Nombre</th>
+                                        <th>Programa Academico</th>
+                                        <th>Grupo Investigativo</th>
+                                        <th>Año convocatoria</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each projects_query}}
+                                    <tr>
+                                        <td>{{codigo_proyecto}}</td>
+                                        <td>
+                                            {{nombre_proyecto}}
+                                        </td>
+                                        <td>{{programa_academico}}</td>
+                                        <td>{{grupo_investigacion}}</td>
+                                        <td>{{year}}</td>
+                                        <td>
+                                            <center>
+                                                <a href="/{{codigo_proyecto}}/ver_detalle" class="btn btn-primary btn-inversed btn-small"><i class="fa fa-pencil"></i>Ver más</a>
+                                            </center>
+                                        </td>
+                                    </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+                        </div><!-- /.block-content-inner -->
+                    </div><!-- /.block-content -->
+                </div><!-- /.container -->
+            </div><!-- /#main-inner -->
+        </div><!-- /#main -->
+    </div><!-- /#main-wrapper -->

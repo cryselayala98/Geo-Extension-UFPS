@@ -1,0 +1,101 @@
+<!--autores-->
+<h3>Autores</h3>
+<div class="box">
+
+  <form action="/links/{{proyecto.codigo_proyecto}}/registrarAutor" method="POST">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="form-group">
+          <label>id del autor(No obligatorio)</label>
+          <input type="text" class="form-control" name="id" required>
+        </div><!-- /.form-group -->
+      </div>
+
+      <div class="col-sm-5">
+        <div class="form-group">
+          <label>Nombre</label>
+          <input type="text" class="form-control" name="nombre" required>
+        </div><!-- /.form-group -->
+      </div>
+
+      <div class="col-sm-2">
+        <!-- Default inline 1-->
+        <label>Tipo de Autor</label>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" class="custom-control-input" value="Principal" id="Principal" name="tipo" checked>
+          <label class="custom-control-label" for="Principal">Principal</label>
+        </div>
+        <!-- Default inline 2-->
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" class="custom-control-input" value="Secundario" id="Secundario" name="tipo">
+          <label class="custom-control-label" for="Secundario">Secundario</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="form-group">
+          <label>unidad académica (describir si pertenece a otra institución)</label>
+          <input type="text" class="form-control" name="unidad_academica" required>
+        </div><!-- /.form-group -->
+      </div>
+
+      <div class="col-sm-5">
+        <div class="form-group">
+          <label>Cargo</label>
+          <input type="text" class="form-control" name="cargo" required>
+        </div><!-- /.form-group -->
+      </div>
+
+      <div class="row-sm-2">
+        <div class="form-group">
+          <input type="submit" value="Registrar Autor" class="btn btn-inversed btn-primary" style="margin-top: 20px;">
+        </div><!-- /.form-group -->
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="box">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="center">
+        {{#if autores}}
+
+          <table class="table table-striped" id="tabla_autores">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Unidad académica</th>
+                <th>Cargo</th>
+                <th>Tipo</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each autores}}
+              <tr>
+                <td>{{id}}</td>
+                <td>{{nombre}}</td>
+                <td>{{unidad_academica}}</td>
+                <td>{{cargo}}</td>
+                <td>{{tipo}}</td>
+                <td>
+                  <center>
+                     <a href="/links/{{proyecto.codigo_proyecto}}/{{id}}/eliminar_autor" class="btn btn-primary btn-inversed btn-small"><i class="fa fa-ban"></i>Eliminar</a>
+                  </center>
+                </td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+
+        {{else}}
+          No hay autores registrados
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

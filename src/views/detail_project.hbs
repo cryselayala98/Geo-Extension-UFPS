@@ -1,0 +1,70 @@
+<div id="main-wrapper">
+    <div id="main">
+        <div id="main-inner">
+            <div class="container">
+                <div class="block-content block-content-small-padding">
+                    <div class="block-content-inner">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h2>{{proyecto.nombre_proyecto}}</h2>
+
+                                <div class="agency-detail">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="agency-detail-picture">
+                                                <img src="https://www.laopinion.com.co/sites/default/files/styles/640x370/public/2019/02/11/imagen/ufps.jpg" alt=""
+                                                    class="img-responsive">
+                                            </div><!-- /.agent-detail-picture -->
+                                        </div>
+
+                                        <div class="col-sm-8">
+                                            <p>
+                                                <strong>Código del Proyecto: </strong>{{proyecto.codigo_proyecto}} <br>
+                                                <strong>Programa Académico: </strong>{{proyecto.programa_academico}} <br>
+                                                <strong>Número de Convenio: </strong>{{proyecto.num_convenio}} <br>
+                                                <strong>Grupo de Investigación: </strong>{{proyecto.grupo_investigacion}} <br>
+                                                <strong>Meses de duración: </strong> {{proyecto.meses_duracion}}
+                                                <br> <br>
+                                                <strong>Fecha de Inicio: </strong> {{fechas.f_i}}<br>
+                                                <strong>Fecha de finalizacion: </strong> {{fechas.f_f}} <br>
+                                                <strong>Población: </strong> {{proyecto.poblacion}} <br>
+                                                <strong>Estado: {{proyecto.estado}}</strong> <br>
+                                                <strong>Correo de Contacto: </strong> {{proyecto.correo_contacto}}
+
+                                            </p>
+                                        </div>
+                                    </div><!-- /.row -->
+                                </div><!-- /.agency-detail -->
+
+                                <h3>Información de los autores</h3>
+                                <br>
+                                {{#each autores}}
+                                <p>
+                                    <strong>Nombre: </strong>{{nombre}} <br>
+                                    <strong>Unidad Académica: </strong>{{unidad_academica}} <br>
+                                    <strong>Cargo: </strong>{{cargo}} <br>
+                                    <strong>Tipo de autor: </strong> {{tipo}}
+
+                                    <br><br>
+                                </p>
+
+                                {{/each}}
+                                <h3>Descripción del proyecto</h3> 
+                            {{{proyecto.descripcion}}}
+                            </div>
+                            <div class="col-sm-4">
+                                <h4>Instituciones Aliadas</h4>
+                                {{#each instituciones}}
+                                    <strong>{{nombre}}</strong>
+                                    <br>
+                                    {{{descripcion}}}
+                                    <br><br>
+                                {{/each}}
+                            </div>
+                        </div><!-- /.row -->
+                    </div><!-- /.block-content-inner -->
+                </div><!-- /.block-content -->
+            </div><!-- /.container -->
+        </div><!-- /#main-inner -->
+    </div><!-- /#main -->
+</div><!-- /#main-wrapper -->

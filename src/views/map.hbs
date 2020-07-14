@@ -1,0 +1,129 @@
+        <div id="main-wrapper">
+            <div id="main">
+                <div id="main-inner">
+                    <!-- MAP -->
+                    <div class="block-content no-padding">
+                        <div class="block-content-inner">
+                            <div class="map-wrapper">
+                                <div id="map" data-style="1"></div>
+                                <!-- /#map -->
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-sm-offset-8 col-md-3 col-md-offset-9 map-navigation-positioning">
+                                            <div class="map-navigation-wrapper">
+                                                <div class="map-navigation">
+                                                    <form method="post" id="consultar_proyectos" action="/consultar_geo_proyectos" class="clearfix consultar_proyectos">
+                                                        <div class="form-group col-sm-12">
+                                                            <label>Convocatoria</label>
+
+                                                            <div class="select-wrapper">
+                                                                <select id="select-country" name="convocatoria" class="form-control">
+                                                                    <option value="todas">Todas</option>
+                                                                    <option value="2014">2014</option>
+                                                                    <option value="2015">2015</option>
+                                                                    <option value="2016">2016</option>
+                                                                    <option value="2017">2017</option>
+                                                                    <option value="2018">2018</option>
+                                                                    <option value="2019">2019</option>
+                                                                    <option value="2019">2020</option>
+                                                               </select>
+                                                            </div>
+                                                            <!-- /.select-wrapper -->
+                                                        </div>
+                                                        <!-- /.form-group -->
+
+                                                        <div class="form-group col-sm-12">
+                                                            <label>Programa académico</label>
+
+                                                            <div class="select-wrapper">
+                                                                <select id="select-location" name="programa" class="form-control">
+                                                                    <option value="todas">Todas</option>
+                                                                    <option value="Administración de Empresas">Administración de Empresas</option>
+                                                                    <option value="Arquitectura">Arquitectura</option>
+                                                                    <option value="Comercio Internacional">Comercio Internacional</option>
+                                                                    <option value="Comunicación Social">Comunicación Social</option>
+                                                                    <option value="Contaduría Pública">Contaduría Pública</option>
+                                                                    <option value="Derecho">Derecho</option>
+                                                                    <option value="Enfermería"> Enfermería</option>
+                                                                    <option value="Ingeniería Agroindustrial">Ingeniería Agroindustrial</option>
+                                                                    <option value="Ingeniería Agronómica">Ingeniería Agronómica</option>
+                                                                    <option value="Ingeniería Ambiental">Ingeniería Ambiental</option>
+                                                                    <option value="Ingeniería Biotecnológica">Ingeniería Biotecnológica</option>
+                                                                    <option value="Ingeniería Civil">Ingeniería Civil</option>
+                                                                    <option value="Ingeniería de Minas">Ingeniería de Minas</option>
+                                                                    <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                                                                    <option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option>
+                                                                    <option value="Ingeniería Electrónica">Ingeniería Electrónica</option>
+                                                                    <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                                                                    <option value="Ingeniería Mecánica">Ingeniería Mecánica</option>
+                                                                    <option value="Ingeniería Pecuaria">Ingeniería Pecuaria</option>
+                                                                    <option value="Licenciatura en Matemáticas">Licenciatura en Matemáticas</option>
+                                                                    <option value="Licenciatura en Ciencias Naturales y Educación Ambiental">Licenciatura en Ciencias Naturales y Educación Ambiental</option>
+                                                                    <option value="Licenciatura en Educación Infantil">Licenciatura en Educación Infantil</option>
+                                                                    <option value="Química Industrial">Química Industrial</option>
+                                                                    <option value="Seguridad y Salud en el Trabajo">Seguridad y Salud en el Trabajo</option>
+                                                                    <option value="Trabajo Social">Trabajo Social</option>
+                                                                    <option value="Zootecnia">Zootecnia</option>
+                                                                </select>
+                                                            </div>
+                                                            <!-- /.select-wrapper -->
+                                                        </div>
+                                                        <!-- /.form-group -->
+
+                                                        <div class="form-group col-sm-12">
+                                                            <label>Estado</label>
+
+                                                            <div class="select-wrapper">
+                                                                <select id="select-sublocation" name="estado" class="form-control">
+                                                                    <option value="todas">Ambos</option>
+                                                                    <option value="en_ejecucion">en_ejecucion</option>
+                                                                    <option value="finalizado">finalizado</option>
+                                                                </select>
+                                                            </div>
+                                                            <!-- /.select-wrapper -->
+                                                        </div>
+                                                        <!-- /.form-group -->
+
+                                                        <div class="form-group col-sm-12">
+                                                            <label>Búsqueda por nombre de proyecto</label>
+                                                            <input type="text" class="form-control" name="especifico" placeholder="ej. Cúcuta">
+                                                        </div>
+                                                        <!-- /.form-group -->
+
+                                                        <!--div class="form-group col-sm-12">
+                                                            <input type="submit" class="btn btn-primary btn-inversed btn-block" value="Buscar Proyectos">
+                                                        </div-->
+                                                        <!-- /.form-group -->
+                                                    </form>
+                                                        <div class="form-group col-sm-12">
+                                                            <button id="query" class="btn btn-primary btn-inversed btn-block">Buscar Proyectos</button>
+                                                        </div>
+                                                </div>
+                                                <!-- /.map-navigation -->
+                                            </div>
+                                            <!-- /.map-navigation-wrapper -->
+                                        </div>
+                                        <!-- /.col-sm-3 -->
+                                    </div>
+                                    <!-- /.row -->
+                                </div>
+                                <!-- /.container -->
+
+                            </div>
+                            <!-- /.map-wrapper -->
+                        </div>
+                        <!-- /.block-content-inner -->
+                    </div>
+                    <!-- /.block-content -->
+                </div>
+                <!-- /#main-inner -->
+            </div>
+            <!-- /#main -->
+        </div>
+        <!-- /#main-wrapper -->
+
+
+        <!--Leaflet-->
+     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <script type="text/javascript" src="/public/js/leaflet-properties.js"></script>

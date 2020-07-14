@@ -1,0 +1,45 @@
+{{>message}} <!--mensajes en caso de que inicie sesion-->
+<!--listar los proyectos -->
+<div id="main-wrapper">
+        <div id="main">
+            <div id="main-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-9">
+                        <div class="block-content block-content-small-padding">
+                        <div class="block-content-inner">
+                            <h2 class="center">Proyectos de Extensión</h2>
+                            <table class="table table-striped" id="myTable">
+                                <thead>
+                                    <tr>
+                                        <th width="20">Codigo</th>
+                                        <th width="600">Nombre</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each projects_query}}
+                                    <tr>
+                                        <td>{{codigo_proyecto}}</td>
+                                        <td>
+                                            {{nombre_proyecto}}
+                                        </td>
+                                        <td>
+                                            <center>
+                                                <a href="/links/{{codigo_proyecto}}/editar" class="btn btn-primary btn-inversed btn-small"><i class="fa fa-pencil"></i></a>
+                                                <a href="#" class="btn btn-primary btn-inversed btn-small"><i class="fa fa-ban"></i></a>
+                                            </center>
+                                        </td>
+                                    </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+                        </div><!-- /.block-content-inner -->
+                    </div><!-- /.block-content -->
+                    </div>
+                    {{>right_sidebar}}
+                    </div>
+                </div><!-- /.container -->
+            </div><!-- /#main-inner -->
+        </div><!-- /#main -->
+    </div><!-- /#main-wrapper -->
